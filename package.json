@@ -1,0 +1,24 @@
+{
+  "name": "lego",
+  "version": "1.0.0",
+  "description": "A trial project.",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeliusdev/lego.git"
+  },
+  "author": "George",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aeliusdev/lego/issues"
+  },
+  "homepage": "https://github.com/aeliusdev/lego#readme"
+}

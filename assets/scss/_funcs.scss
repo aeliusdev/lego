@@ -1,0 +1,13 @@
+@mixin transition_ ($left, $top)
+{
+	transform: translate($left,$top);
+	-moz-transform: translate($left,$top);
+	-webkit-transform: translate($left,$top);
+}
+
+@mixin border_radius ($px)
+{
+	border-radius: $px;
+	-moz-border-radius: $px;
+	-webkit-border-radius: $px;	
+}

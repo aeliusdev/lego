@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);     
+@import 'funcs';
+@import 'reset';
+
+$outer: 80%;
+
+body {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 100;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	color: #fff;
+	font-weight: 400;
+	text-transform: lowercase;
+	font-size: 60px;
+	margin-bottom: 80px;
+}
+
+h2 {
+	font-size: 45px;
+	margin-bottom: 30px;
+	font-weight: 100;
+}
+
+#logo {
+	float: left;	
+}
+
+#header-wrapper {
+	width: $outer;
+	margin: auto;
+	padding: 50px 0px;
+}
+
+nav {
+	float: right;
+	margin-top: 20px;
+	
+	ul {
+		
+	}
+	li {
+		float: left;
+		display: inline;
+		margin-left: 30px;
+	}
+	a {
+		display: block;
+		font-weight: 400;
+		text-decoration: none;
+		color: #fff;
+		text-transform: lowercase;
+		padding: 18px 30px;
+		box-sizing: border-box;
+		
+		&:hover, &.active {
+			color: #fff;
+			border: 2px solid #d01012;
+			@include border-radius(50px);
+		}
+	}
+}
+
+#hero-desc {
+	@include transition_(-50%,-50%);
+	left: 50%;
+	top: 60%;
+	position: absolute;
+	width: 50%;
+	text-align: center;
+	height: 50%;
+}
+
+p {
+	color: #868686;
+}
+
+.two_col {
+	width: 48%;
+	margin-right: 4%;
+	.last {
+		margin-right: 0px;
+	}
+}
+
+header {
+	background: url("../images/hero.jpg") no-repeat;
+	background-size: cover;
+	min-height: 1000px;
+}
+
+.page-section {
+	padding: 0px 50px;
+	.alt {
+		background: #fafafa;
+	}
+}
+
+a.button {
+	background: #d01012;
+	@include border-radius(50px);
+	color: #fff;
+	padding: 20px;
+	text-decoration: none;
+}
+
+footer {}
+
+.clear {
+	clear: both;
+}
+
+@media screen and (max-width: 960px) {
+	
+}

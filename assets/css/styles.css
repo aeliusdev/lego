@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  color: #fff;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 60px;
+  margin-bottom: 80px; }
+
+h2 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  font-weight: 100; }
+
+#logo {
+  float: left; }
+
+#header-wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0px; }
+
+nav {
+  float: right;
+  margin-top: 20px; }
+  nav li {
+    float: left;
+    display: inline;
+    margin-left: 30px; }
+  nav a {
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    text-transform: lowercase;
+    padding: 18px 30px;
+    box-sizing: border-box; }
+    nav a:hover, nav a.active {
+      color: #fff;
+      border: 2px solid #d01012;
+      border-radius: 50px;
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px; }
+
+#hero-desc {
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  height: 50%; }
+
+p {
+  color: #868686; }
+
+.two_col {
+  width: 48%;
+  margin-right: 4%; }
+  .two_col .last {
+    margin-right: 0px; }
+
+header {
+  background: url("../images/hero.jpg") no-repeat;
+  background-size: cover;
+  min-height: 1000px; }
+
+.page-section {
+  padding: 0px 50px; }
+  .page-section .alt {
+    background: #fafafa; }
+
+a.button {
+  background: #d01012;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none; }
+
+.clear {
+  clear: both; }
