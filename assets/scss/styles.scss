@@ -32,7 +32,7 @@ h2 {
 	float: left;	
 }
 
-#header-wrapper {
+#header-wrapper, #footer-wrapper, #lower-footer-wrapper {
 	width: $outer;
 	margin: auto;
 	padding: 50px 0px;
@@ -58,6 +58,7 @@ nav {
 		text-transform: lowercase;
 		padding: 18px 30px;
 		box-sizing: border-box;
+		border: 2px solid rgba(0,0,0,0);
 		
 		&:hover, &.active {
 			@include border-radius(50px);
@@ -93,7 +94,7 @@ p {
 }
 
 .one_col {
-	width: 50%;
+	width: 60%;
 	margin: auto;
 	padding: $page_section_padding;
 	box-sizing: border-box;
@@ -144,11 +145,20 @@ a.button {
 		padding: 5px;
 		border: 2px solid #fff;
 		position: relative;
-		margin-left: 15px;
 		top: 8px;
-		transform: rotate(90deg);
 	}
+	
+	&.email svg {
+		@include border-radius(0px);	
+		border: none;		
+	}
+	
+	&.arrow svg {
+		margin-left: 15px;		
+	}
+	
 	&.arrow-right svg {
+		margin-left: 15px;
 		transform: rotate(90deg);			
 	}
 	&.shadow {
@@ -159,11 +169,38 @@ a.button {
 footer {
 	background: #262e3a;
 	color: #96989c;
-	min-height: 300px;
+	font-weight: 400;
+	font-size: 13px;
+	
+	a {
+		color: #d01012;
+		&.button.shadow {
+			@include box-shadow(#333);
+		}
+		font-size: 14px;
+	}
+	
+	h2 {
+		margin-bottom: 60px;
+		color: #fff;
+	}
 }
 
 .clear {
 	clear: both;
+}
+
+#lower-footer {
+	border-top: 1px solid #3c434e;
+	padding-bottom: 16px;
+}
+
+#footer-credits {
+	float: left;
+}
+
+#footer-author {
+	float: right;
 }
 
 @media screen and (max-width: 960px) {
