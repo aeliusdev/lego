@@ -75,7 +75,7 @@ p {
 /* HEADER */
 
 header {
-	background: url("../images/hero.jpg") no-repeat;
+	background: url("../images/hero.jpg") no-repeat center center fixed;
 	background-size: cover;
 	min-height: 1000px;
 }
@@ -229,7 +229,7 @@ footer {
 /* CALCULATOR */
 
 #calculator {
-	@include box-shadow(#ccc, 70px);
+	@include box-shadow(#ccc, 90px);
 	@include border-radius(8px);
 	padding: 8% 10%;
 	margin: auto;
@@ -261,6 +261,16 @@ footer {
 	}
 }
 
-@media screen and (max-width: 960px) {
-	
+@media screen and (max-width: 1164px) {
+	.two_col img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.one_col, .two_col {
+		width: 100%;
+		float: none;
+	}
 }

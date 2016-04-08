@@ -192,7 +192,7 @@ p {
 
 /* HEADER */
 header {
-  background: url("../images/hero.jpg") no-repeat;
+  background: url("../images/hero.jpg") no-repeat center center fixed;
   background-size: cover;
   min-height: 1000px; }
 
@@ -323,9 +323,9 @@ footer {
 
 /* CALCULATOR */
 #calculator {
-  box-shadow: 0px 0px 70px #ccc;
-  -webkit-box-shadow: 0px 0px 70px #ccc;
-  -moz-box-shadow: 0px 0px 70px #ccc;
+  box-shadow: 0px 0px 90px #ccc;
+  -webkit-box-shadow: 0px 0px 90px #ccc;
+  -moz-box-shadow: 0px 0px 90px #ccc;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -355,3 +355,13 @@ footer {
     #calculator-results-grid .calculator-column.last {
       width: 25%;
       background: #e8e7e7; }
+
+@media screen and (max-width: 1164px) {
+  .two_col img {
+    height: auto;
+    width: 100%; } }
+
+@media screen and (max-width: 940px) {
+  .one_col, .two_col {
+    width: 100%;
+    float: none; } }
