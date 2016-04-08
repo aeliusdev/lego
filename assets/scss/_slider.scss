@@ -1,3 +1,5 @@
+@import 'funcs';
+$red: #d01012;
 /*!
  * jQuery UI Slider 1.11.4
  * http://jqueryui.com
@@ -11,16 +13,20 @@
 .ui-slider {
 	position: relative;
 	text-align: left;
+	@include border-radius(50px);
 }
 .ui-slider .ui-slider-handle {
 	position: absolute;
 	z-index: 2;
-	width: 1.2em;
-	height: 1.2em;
+	width: 12px;
+	height: 12px;
 	cursor: default;
 	-ms-touch-action: none;
 	touch-action: none;
-	background: #333;
+	border: 3px solid $red;
+	background: #fff;
+	@include border-radius(50%);
+	outline: none;
 }
 .ui-slider .ui-slider-range {
 	position: absolute;
@@ -29,6 +35,7 @@
 	display: block;
 	border: 0;
 	background-position: 0 0;
+	@include border-radius(50px);
 }
 
 /* support: IE8 - See #6727 */
@@ -38,21 +45,25 @@
 }
 
 .ui-slider-horizontal {
-	height: .8em;
+	height: 4px;
+	background: #eee;
 }
 .ui-slider-horizontal .ui-slider-handle {
-	top: -.3em;
+	top: -.4em;
 	margin-left: -.6em;
 }
 .ui-slider-horizontal .ui-slider-range {
 	top: 0;
 	height: 100%;
+	background: $red;
 }
 .ui-slider-horizontal .ui-slider-range-min {
 	left: 0;
+	background: $red;
 }
 .ui-slider-horizontal .ui-slider-range-max {
 	right: 0;
+	background: $red;
 }
 
 .ui-slider-vertical {
@@ -67,10 +78,13 @@
 .ui-slider-vertical .ui-slider-range {
 	left: 0;
 	width: 100%;
+	background: $red;
 }
 .ui-slider-vertical .ui-slider-range-min {
+	background: $red;
 	bottom: 0;
 }
 .ui-slider-vertical .ui-slider-range-max {
+	background: $red;
 	top: 0;
 }

@@ -7,30 +7,38 @@
 /* vars */
 $outer: 80%;
 $page_section_padding: 160px 10%;
-$red: #d01012;
+$red: #d01012; 
 
 /* global tags at the top */
 body {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto Slab', serif; 
 	font-weight: 100;
 }
 
 a {
 	text-decoration: none;
-}
+}  
 
 h1 {
-	color: #fff;
+	color: #fff; 
 	font-weight: 400;
 	text-transform: lowercase;
 	font-size: 60px;
 	margin-bottom: 80px;
 }
-
-h2 {
+ 
+h2 { 
 	font-size: 45px;
 	margin-bottom: 30px;
 	font-weight: 100;
+}
+
+h3 {
+	margin: 0px 0px 20px 0px;
+	padding-top: 20px;
+	display: block;
+	color: #262e3a;
+	font-weight: 400;
 }
 
 p { 
@@ -39,11 +47,29 @@ p {
 	margin-bottom: 40px;
 }
 
+/* GLOBAL CLASSES */
+ 
+.center-text {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+} 
+
 /* give wrapper actual ids for clarity but use the same codebase for styling */
 #header-wrapper, #footer-wrapper, #lower-footer-wrapper {
 	width: $outer;
 	margin: auto;
 	padding: 50px 0px;
+}
+
+/* same as above */
+.page-section, .footer-section {
+	padding: 0px 50px;
+	&.alt {
+		background: #fafafa;
+	}
 }
 
 /* HEADER */
@@ -73,7 +99,7 @@ nav {
 	float: right;
 	margin-top: 20px;
 	
-	/* nesting li and a here for clarity */
+	/* nesting li and a here for clarity */ 
 	li {
 		float: left;
 		display: inline;
@@ -95,16 +121,6 @@ nav {
 			}
 		}
 	}
-}
-
-/* CLASSES */
-
-.center-text {
-	text-align: center;
-}
-
-.clear {
-	clear: both;
 }
 
 /* Writing my own grid systems because idk */
@@ -135,13 +151,6 @@ nav {
 .two_col_wrap {
 	width: 80%;
 	margin: auto;
-}
-
-.page-section, .footer-section {
-	padding: 0px 50px;
-	&.alt {
-		background: #fafafa;
-	}
 }
 
 /* treating buttons as a class :D */
@@ -220,11 +229,36 @@ footer {
 /* CALCULATOR */
 
 #calculator {
-	@include box-shadow(#ccc, 50px);
-	@include border-radius(30px);
-	padding: 0px 5%;
-	min-height: 400px;
+	@include box-shadow(#ccc, 70px);
+	@include border-radius(8px);
+	padding: 8% 10%;
 	margin: auto;
+}
+
+#calculator-slider {
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #eee;
+}
+
+/* little experiment trying to not use tables */
+#calculator-results-grid {
+	overflow: hidden;
+	@include border-radius(10px);
+	.calculator-column {
+		background: #f5f5f5;
+		padding: 18px;
+		color: #6e6e6e;
+		box-sizing: border-box;
+		width: 75%;
+		float: left;
+		border-right: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+		&.last {
+			width: 25%;
+			background: #e8e7e7;
+		}
+	}
 }
 
 @media screen and (max-width: 960px) {

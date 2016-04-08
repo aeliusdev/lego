@@ -12,17 +12,25 @@
  */
 .ui-slider {
   position: relative;
-  text-align: left; }
+  text-align: left;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px; }
 
 .ui-slider .ui-slider-handle {
   position: absolute;
   z-index: 2;
-  width: 1.2em;
-  height: 1.2em;
+  width: 12px;
+  height: 12px;
   cursor: default;
   -ms-touch-action: none;
   touch-action: none;
-  background: #333; }
+  border: 3px solid #d01012;
+  background: #fff;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  outline: none; }
 
 .ui-slider .ui-slider-range {
   position: absolute;
@@ -30,7 +38,10 @@
   font-size: .7em;
   display: block;
   border: 0;
-  background-position: 0 0; }
+  background-position: 0 0;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px; }
 
 /* support: IE8 - See #6727 */
 .ui-slider.ui-state-disabled .ui-slider-handle,
@@ -38,21 +49,25 @@
   filter: inherit; }
 
 .ui-slider-horizontal {
-  height: .8em; }
+  height: 4px;
+  background: #eee; }
 
 .ui-slider-horizontal .ui-slider-handle {
-  top: -.3em;
+  top: -.4em;
   margin-left: -.6em; }
 
 .ui-slider-horizontal .ui-slider-range {
   top: 0;
-  height: 100%; }
+  height: 100%;
+  background: #d01012; }
 
 .ui-slider-horizontal .ui-slider-range-min {
-  left: 0; }
+  left: 0;
+  background: #d01012; }
 
 .ui-slider-horizontal .ui-slider-range-max {
-  right: 0; }
+  right: 0;
+  background: #d01012; }
 
 .ui-slider-vertical {
   width: .8em;
@@ -65,12 +80,15 @@
 
 .ui-slider-vertical .ui-slider-range {
   left: 0;
-  width: 100%; }
+  width: 100%;
+  background: #d01012; }
 
 .ui-slider-vertical .ui-slider-range-min {
+  background: #d01012;
   bottom: 0; }
 
 .ui-slider-vertical .ui-slider-range-max {
+  background: #d01012;
   top: 0; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -141,16 +159,36 @@ h2 {
   margin-bottom: 30px;
   font-weight: 100; }
 
+h3 {
+  margin: 0px 0px 20px 0px;
+  padding-top: 20px;
+  display: block;
+  color: #262e3a;
+  font-weight: 400; }
+
 p {
   color: #868686;
   line-height: 30px;
   margin-bottom: 40px; }
+
+/* GLOBAL CLASSES */
+.center-text {
+  text-align: center; }
+
+.clear {
+  clear: both; }
 
 /* give wrapper actual ids for clarity but use the same codebase for styling */
 #header-wrapper, #footer-wrapper, #lower-footer-wrapper {
   width: 80%;
   margin: auto;
   padding: 50px 0px; }
+
+/* same as above */
+.page-section, .footer-section {
+  padding: 0px 50px; }
+  .page-section.alt, .footer-section.alt {
+    background: #fafafa; }
 
 /* HEADER */
 header {
@@ -197,13 +235,6 @@ nav {
         color: #fff;
         border: 2px solid #d01012; }
 
-/* CLASSES */
-.center-text {
-  text-align: center; }
-
-.clear {
-  clear: both; }
-
 /* Writing my own grid systems because idk */
 .one_col {
   width: 60%;
@@ -227,11 +258,6 @@ nav {
 .two_col_wrap {
   width: 80%;
   margin: auto; }
-
-.page-section, .footer-section {
-  padding: 0px 50px; }
-  .page-section.alt, .footer-section.alt {
-    background: #fafafa; }
 
 /* treating buttons as a class :D */
 a.button {
@@ -297,12 +323,35 @@ footer {
 
 /* CALCULATOR */
 #calculator {
-  box-shadow: 0px 0px 50px #ccc;
-  -webkit-box-shadow: 0px 0px 50px #ccc;
-  -moz-box-shadow: 0px 0px 50px #ccc;
-  border-radius: 30px;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  padding: 0px 5%;
-  min-height: 400px;
+  box-shadow: 0px 0px 70px #ccc;
+  -webkit-box-shadow: 0px 0px 70px #ccc;
+  -moz-box-shadow: 0px 0px 70px #ccc;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 8% 10%;
   margin: auto; }
+
+#calculator-slider {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee; }
+
+/* little experiment trying to not use tables */
+#calculator-results-grid {
+  overflow: hidden;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+  #calculator-results-grid .calculator-column {
+    background: #f5f5f5;
+    padding: 18px;
+    color: #6e6e6e;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff; }
+    #calculator-results-grid .calculator-column.last {
+      width: 25%;
+      background: #e8e7e7; }
