@@ -3,6 +3,7 @@
 @import 'reset';
 
 $outer: 80%;
+$page_section_padding: 160px 10%;
 
 body {
 	font-family: 'Roboto Slab', serif;
@@ -59,11 +60,20 @@ nav {
 		box-sizing: border-box;
 		
 		&:hover, &.active {
+			@include border-radius(50px);
 			color: #fff;
 			border: 2px solid #d01012;
-			@include border-radius(50px);
 		}
 	}
+}
+
+.center-text {
+	text-align: center;
+}
+
+.two_col_wrap {
+	width: 80%;
+	margin: auto;
 }
 
 #hero-desc {
@@ -71,19 +81,37 @@ nav {
 	left: 50%;
 	top: 60%;
 	position: absolute;
-	width: 50%;
+	width: 80%;
 	text-align: center;
 	height: 50%;
 }
 
 p {
 	color: #868686;
+	line-height: 30px;
+	margin-bottom: 40px;
+}
+
+.one_col {
+	width: 50%;
+	margin: auto;
+	padding: $page_section_padding;
+	box-sizing: border-box;
 }
 
 .two_col {
+	padding: 160px 0px;
 	width: 48%;
 	margin-right: 4%;
-	.last {
+	float: left;
+	box-sizing: border-box;
+	&.img {
+		text-align: center;
+	}
+	svg {
+		text-align: center;
+	}
+	&.last {
 		margin-right: 0px;
 	}
 }
@@ -94,22 +122,45 @@ header {
 	min-height: 1000px;
 }
 
-.page-section {
+.page-section, .footer-section {
 	padding: 0px 50px;
-	.alt {
+	&.alt {
 		background: #fafafa;
 	}
 }
 
 a.button {
-	background: #d01012;
 	@include border-radius(50px);
+	background: #d01012;
 	color: #fff;
-	padding: 20px;
+	padding: 20px 30px;
 	text-decoration: none;
+	position: relative;
+	
+	svg {
+		@include border-radius(50px);	
+		width: 14px;
+		height: 14px;
+		padding: 5px;
+		border: 2px solid #fff;
+		position: relative;
+		margin-left: 15px;
+		top: 8px;
+		transform: rotate(90deg);
+	}
+	&.arrow-right svg {
+		transform: rotate(90deg);			
+	}
+	&.shadow {
+		@include box-shadow(#ccc);
+	}
 }
 
-footer {}
+footer {
+	background: #262e3a;
+	color: #96989c;
+	min-height: 300px;
+}
 
 .clear {
 	clear: both;

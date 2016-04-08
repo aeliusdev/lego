@@ -89,11 +89,18 @@ nav {
     padding: 18px 30px;
     box-sizing: border-box; }
     nav a:hover, nav a.active {
-      color: #fff;
-      border: 2px solid #d01012;
       border-radius: 50px;
       -moz-border-radius: 50px;
-      -webkit-border-radius: 50px; }
+      -webkit-border-radius: 50px;
+      color: #fff;
+      border: 2px solid #d01012; }
+
+.center-text {
+  text-align: center; }
+
+.two_col_wrap {
+  width: 80%;
+  margin: auto; }
 
 #hero-desc {
   transform: translate(-50%, -50%);
@@ -102,17 +109,32 @@ nav {
   left: 50%;
   top: 60%;
   position: absolute;
-  width: 50%;
+  width: 80%;
   text-align: center;
   height: 50%; }
 
 p {
-  color: #868686; }
+  color: #868686;
+  line-height: 30px;
+  margin-bottom: 40px; }
+
+.one_col {
+  width: 50%;
+  margin: auto;
+  padding: 160px 10%;
+  box-sizing: border-box; }
 
 .two_col {
+  padding: 160px 0px;
   width: 48%;
-  margin-right: 4%; }
-  .two_col .last {
+  margin-right: 4%;
+  float: left;
+  box-sizing: border-box; }
+  .two_col.img {
+    text-align: center; }
+  .two_col svg {
+    text-align: center; }
+  .two_col.last {
     margin-right: 0px; }
 
 header {
@@ -120,19 +142,43 @@ header {
   background-size: cover;
   min-height: 1000px; }
 
-.page-section {
+.page-section, .footer-section {
   padding: 0px 50px; }
-  .page-section .alt {
+  .page-section.alt, .footer-section.alt {
     background: #fafafa; }
 
 a.button {
-  background: #d01012;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
+  background: #d01012;
   color: #fff;
-  padding: 20px;
-  text-decoration: none; }
+  padding: 20px 30px;
+  text-decoration: none;
+  position: relative; }
+  a.button svg {
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    width: 14px;
+    height: 14px;
+    padding: 5px;
+    border: 2px solid #fff;
+    position: relative;
+    margin-left: 15px;
+    top: 8px;
+    transform: rotate(90deg); }
+  a.button.arrow-right svg {
+    transform: rotate(90deg); }
+  a.button.shadow {
+    box-shadow: 0px 0px 15px #ccc;
+    -webkit-box-shadow: 0px 0px 15px #ccc;
+    -moz-box-shadow: 0px 0px 15px #ccc; }
+
+footer {
+  background: #262e3a;
+  color: #96989c;
+  min-height: 300px; }
 
 .clear {
   clear: both; }
