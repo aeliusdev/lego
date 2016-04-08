@@ -1,0 +1,2 @@
+# lego
+A trial project.
