@@ -1,10 +1,15 @@
+/* import google fonts and reset and place mixins in a separate */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);     
+@import 'slider';
 @import 'funcs';
 @import 'reset';
 
+/* vars */
 $outer: 80%;
 $page_section_padding: 160px 10%;
+$red: #d01012;
 
+/* global tags at the top */
 body {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 100;
@@ -28,53 +33,25 @@ h2 {
 	font-weight: 100;
 }
 
-#logo {
-	float: left;	
+p { 
+	color: #868686;
+	line-height: 30px;
+	margin-bottom: 40px;
 }
 
+/* give wrapper actual ids for clarity but use the same codebase for styling */
 #header-wrapper, #footer-wrapper, #lower-footer-wrapper {
 	width: $outer;
 	margin: auto;
 	padding: 50px 0px;
 }
 
-nav {
-	float: right;
-	margin-top: 20px;
-	
-	ul {
-		
-	}
-	li {
-		float: left;
-		display: inline;
-		margin-left: 30px;
-	}
-	a {
-		display: block;
-		font-weight: 400;
-		text-decoration: none;
-		color: #fff;
-		text-transform: lowercase;
-		padding: 18px 30px;
-		box-sizing: border-box;
-		border: 2px solid rgba(0,0,0,0);
-		
-		&:hover, &.active {
-			@include border-radius(50px);
-			color: #fff;
-			border: 2px solid #d01012;
-		}
-	}
-}
+/* HEADER */
 
-.center-text {
-	text-align: center;
-}
-
-.two_col_wrap {
-	width: 80%;
-	margin: auto;
+header {
+	background: url("../images/hero.jpg") no-repeat;
+	background-size: cover;
+	min-height: 1000px;
 }
 
 #hero-desc {
@@ -87,12 +64,50 @@ nav {
 	height: 50%;
 }
 
-p {
-	color: #868686;
-	line-height: 30px;
-	margin-bottom: 40px;
+/* i use float to position elements side by side some might use position: absolute */
+#logo {
+	float: left;	
 }
 
+nav {
+	float: right;
+	margin-top: 20px;
+	
+	/* nesting li and a here for clarity */
+	li {
+		float: left;
+		display: inline;
+		margin-left: 30px;
+		a {
+			display: block;
+			font-weight: 400;
+			text-decoration: none;
+			color: #fff;
+			text-transform: lowercase;
+			padding: 18px 30px;
+			box-sizing: border-box;
+			border: 2px solid rgba(0,0,0,0);
+			
+			&:hover, &.active {
+				@include border-radius(50px);
+				color: #fff;
+				border: 2px solid $red;
+			}
+		}
+	}
+}
+
+/* CLASSES */
+
+.center-text {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Writing my own grid systems because idk */
 .one_col {
 	width: 60%;
 	margin: auto;
@@ -117,10 +132,9 @@ p {
 	}
 }
 
-header {
-	background: url("../images/hero.jpg") no-repeat;
-	background-size: cover;
-	min-height: 1000px;
+.two_col_wrap {
+	width: 80%;
+	margin: auto;
 }
 
 .page-section, .footer-section {
@@ -130,9 +144,11 @@ header {
 	}
 }
 
+/* treating buttons as a class :D */
+
 a.button {
 	@include border-radius(50px);
-	background: #d01012;
+	background: $red;
 	color: #fff;
 	padding: 20px 30px;
 	text-decoration: none;
@@ -162,9 +178,11 @@ a.button {
 		transform: rotate(90deg);			
 	}
 	&.shadow {
-		@include box-shadow(#ccc);
+		@include box-shadow(#ccc, 15px);
 	}
 }
+
+/* FOOTER */
 
 footer {
 	background: #262e3a;
@@ -175,7 +193,7 @@ footer {
 	a {
 		color: #d01012;
 		&.button.shadow {
-			@include box-shadow(#333);
+			@include box-shadow(#333, 15px);
 		}
 		font-size: 14px;
 	}
@@ -184,10 +202,6 @@ footer {
 		margin-bottom: 60px;
 		color: #fff;
 	}
-}
-
-.clear {
-	clear: both;
 }
 
 #lower-footer {
@@ -201,6 +215,16 @@ footer {
 
 #footer-author {
 	float: right;
+}
+
+/* CALCULATOR */
+
+#calculator {
+	@include box-shadow(#ccc, 50px);
+	@include border-radius(30px);
+	padding: 0px 5%;
+	min-height: 400px;
+	margin: auto;
 }
 
 @media screen and (max-width: 960px) {
