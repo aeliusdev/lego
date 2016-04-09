@@ -30,6 +30,7 @@
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  cursor: pointer;
   outline: none; }
 
 .ui-slider .ui-slider-range {
@@ -90,6 +91,42 @@
 .ui-slider-vertical .ui-slider-range-max {
   background: #d01012;
   top: 0; }
+
+/* http://jsfiddle.net/9qwmX/2/ */
+.tooltip {
+  position: absolute;
+  z-index: 1020;
+  display: block;
+  padding: 5px;
+  font-size: 11px;
+  visibility: visible;
+  margin-top: -2px;
+  bottom: 140%;
+  margin-left: -2em; }
+
+.tooltip .tooltip-arrow {
+  bottom: 1px;
+  left: 50%;
+  margin-left: -5px;
+  border-top: 5px solid #000000;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  width: 0;
+  height: 0; }
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 8px 12px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  font-family: "Arial", sans-serif;
+  font-weight: 600; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -161,7 +198,6 @@ h2 {
 
 h3 {
   margin: 0px 0px 20px 0px;
-  padding-top: 20px;
   display: block;
   color: #262e3a;
   font-weight: 400; }
@@ -237,8 +273,16 @@ nav {
 
 #mobile-menu {
   display: none;
-  margin-top: 20px;
-  text-align: center; }
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 2; }
+  #mobile-menu ul li a {
+    display: block;
+    padding: 10px;
+    background: #111;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff; }
 
 #mobile-menu-toggle {
   background: #d01012;
@@ -383,10 +427,21 @@ footer {
   nav {
     display: none; }
   #mobile-menu {
-    display: block; } }
+    display: block; }
+    #mobile-menu ul {
+      display: none; }
+  #footer-author,
+  #footer-credits {
+    float: none;
+    text-align: center; }
+  #footer-credits {
+    margin-bottom: 25px; } }
 
 @media screen and (max-width: 500px) {
   .page-section {
     padding: 80px 5%; }
   .one_col, .two_col {
-    padding: 40px 5%; } }
+    padding: 40px 5%; }
+  #lower-footer {
+    margin-top: 20px;
+    padding-bottom: 0px; } }

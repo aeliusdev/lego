@@ -26,6 +26,7 @@ $red: #d01012;
 	border: 3px solid $red;
 	background: #fff;
 	@include border-radius(50%);
+	cursor: pointer;
 	outline: none;
 }
 .ui-slider .ui-slider-range {
@@ -87,4 +88,41 @@ $red: #d01012;
 .ui-slider-vertical .ui-slider-range-max {
 	background: $red;
 	top: 0;
+}
+
+/* http://jsfiddle.net/9qwmX/2/ */
+.tooltip {
+    position: absolute;
+    z-index: 1020;
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    visibility: visible;
+    margin-top: -2px;
+    bottom:140%;
+    margin-left: -2em;
+}
+
+.tooltip .tooltip-arrow {
+    bottom: 1px;
+    left: 50%;
+    margin-left: -5px;
+    border-top: 5px solid #000000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000000;
+    @include border-radius(50px);
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
 }

@@ -35,7 +35,6 @@ h2 {
 
 h3 {
 	margin: 0px 0px 20px 0px;
-	padding-top: 20px;
 	display: block;
 	color: #262e3a;
 	font-weight: 400;
@@ -47,7 +46,7 @@ p {
 	margin-bottom: 40px;
 }
 
-/* GLOBAL CLASSES */
+/* GLOBAL CLASSES */ 
  
 .center-text {
 	text-align: center;
@@ -125,8 +124,22 @@ nav {
 
 #mobile-menu {
 	display: none;
-	margin-top: 20px;
+	margin-top: 40px;
 	text-align: center;
+	position: relative;
+	z-index: 2;
+	
+	ul {
+		li {
+			a {
+				display: block;
+				padding: 10px;
+				background: #111;
+				background: rgba(0,0,0,0.4);
+				color: #fff;
+			}
+		}
+	}
 }
 
 #mobile-menu-toggle {
@@ -296,6 +309,18 @@ footer {
 	}
 	#mobile-menu {
 		display: block;
+		
+		ul {
+			display: none;
+		}
+	}
+	#footer-author,
+	#footer-credits {
+		float: none;
+		text-align: center;
+	}
+	#footer-credits {
+		margin-bottom: 25px;
 	}
 }
 
@@ -305,5 +330,9 @@ footer {
 	}
 	.one_col, .two_col {
 		padding: 40px 5%;
+	}
+	#lower-footer { 
+		margin-top: 20px;
+		padding-bottom: 0px;
 	}
 }
