@@ -184,7 +184,7 @@ p {
   margin: auto;
   padding: 50px 0px; }
 
-/* same as above */
+/* same as above but using classes */
 .page-section, .footer-section {
   padding: 0px 50px; }
   .page-section.alt, .footer-section.alt {
@@ -201,11 +201,11 @@ header {
   -moz-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   left: 50%;
-  top: 60%;
+  top: 50%;
   position: absolute;
   width: 80%;
   text-align: center;
-  height: 50%; }
+  height: 190px; }
 
 /* i use float to position elements side by side some might use position: absolute */
 #logo {
