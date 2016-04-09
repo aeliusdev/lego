@@ -1,4 +1,4 @@
-/* import google fonts and reset and place mixins in a separate */
+/* import google fonts and reset and place mixins in a separate file so they can be reused in various files */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);     
 @import 'slider';
 @import 'funcs';
@@ -123,7 +123,19 @@ nav {
 	}
 }
 
-/* Writing my own grid systems because idk */
+#mobile-menu {
+	display: none;
+	margin-top: 20px;
+	text-align: center;
+}
+
+#mobile-menu-toggle {
+	background: $red;
+	padding: 10px;
+	display: block;
+	color: #fff;
+}
+
 .one_col {
 	width: 60%;
 	margin: auto;
@@ -153,8 +165,7 @@ nav {
 	margin: auto;
 }
 
-/* treating buttons as a class :D */
-
+/* treating buttons as a class */
 a.button {
 	@include border-radius(50px);
 	background: $red;
@@ -272,5 +283,27 @@ footer {
 	.one_col, .two_col {
 		width: 100%;
 		float: none;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	#logo {
+		float: none;
+		text-align: center;
+	}
+	nav {
+		display: none;
+	}
+	#mobile-menu {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.page-section {
+		padding: 80px 5%;
+	}
+	.one_col, .two_col {
+		padding: 40px 5%;
 	}
 }

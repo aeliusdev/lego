@@ -1,6 +1,7 @@
 $(function() 
 {
 	var el = $("#amount");
+	var menu_open = false;
 	
 	$( "#calculator-slider-div" ).slider({range: "min",
 		min: 0,
@@ -35,4 +36,9 @@ $(function()
 	{
 		el.html("1");				
 	}	
+	
+	$(window).resize(function () 
+	{
+		
+	}).resize();
 });
