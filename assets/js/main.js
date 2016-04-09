@@ -8,7 +8,9 @@ $(function()
 	{
 		//console.log(ui.value);
 	    var amount = ui.value || initial_amount;
+	    if (ui.value == 0) amount = 0;
 	    var tooltip = '<div class="tooltip"><div class="tooltip-inner">' + amount + '</div><div class="tooltip-arrow"></div></div>';
+	    
 		if (amount <= 3000)
 		{
 			el.html("3");
